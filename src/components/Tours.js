@@ -1,4 +1,19 @@
-function Tours(){
+import Card from "./Card";
+function Tours({tours,removeTour}){
+return(
+    <div>
+       <div>
+       <h2>Trippin-Tourist Guide</h2>
+       </div>
+       <div>
+          {
+            tours.map((tour)=>{
+                return <Card {...tour} removeTour={removeTour}></Card>
+            })
+          }
+       </div>
+    </div>
+)
 
 }
-export default tours;
+export default Tours;
